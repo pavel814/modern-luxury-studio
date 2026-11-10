@@ -11,7 +11,7 @@ export function FaqList({ items }: { items: { q: string; a: string }[] }) {
               {item.q}
             </span>
           </AccordionTrigger>
-          <AccordionContent className="pb-8 text-base leading-relaxed text-muted-foreground sm:pl-14 md:max-w-3xl">
+          <AccordionContent forceMount className="pb-8 text-base leading-relaxed text-muted-foreground sm:pl-14 md:max-w-3xl">
             {item.a}
           </AccordionContent>
         </AccordionItem>
