@@ -46,7 +46,9 @@ export function SectionHeading({
   );
 }
 
-export function Breadcrumbs({ items }: { items: { label: string; to?: string }[] }) {
+export type Crumb = { label: string; to?: "/services" | "/solutions" | "/industries" | "/cases" | "/blog" };
+
+export function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
     <nav aria-label="Хлебные крошки" className="eyebrow text-muted-foreground">
       <ol className="flex flex-wrap items-center gap-2">
@@ -59,9 +61,9 @@ export function Breadcrumbs({ items }: { items: { label: string; to?: string }[]
           <li key={item.label} className="flex items-center gap-2">
             <ChevronRight className="h-3 w-3" aria-hidden />
             {item.to ? (
-              <a href={item.to} className="transition-colors hover:text-foreground">
+              <Link to={item.to} className="transition-colors hover:text-foreground">
                 {item.label}
-              </a>
+              </Link>
             ) : (
               <span className="text-foreground" aria-current="page">
                 {item.label}
@@ -81,7 +83,7 @@ export function PageHero({
   lead,
   children,
 }: {
-  crumbs: { label: string; to?: string }[];
+  crumbs: Crumb[];
   eyebrow?: string;
   title: ReactNode;
   lead?: ReactNode;
