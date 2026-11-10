@@ -10,33 +10,206 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactsRouteImport } from './routes/contacts'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as CasesIndexRouteImport } from './routes/cases.index'
+import { Route as CasesSlugRouteImport } from './routes/cases.$slug'
+import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
+import { Route as IndustriesSlugRouteImport } from './routes/industries.$slug'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
+import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
+import { Route as SolutionsSlugRouteImport } from './routes/solutions.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactsRoute = ContactsRouteImport.update({
+  id: '/contacts',
+  path: '/contacts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasesIndexRoute = CasesIndexRouteImport.update({
+  id: '/cases/',
+  path: '/cases/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasesSlugRoute = CasesSlugRouteImport.update({
+  id: '/cases/$slug',
+  path: '/cases/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
+  id: '/industries/',
+  path: '/industries/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesSlugRoute = IndustriesSlugRouteImport.update({
+  id: '/industries/$slug',
+  path: '/industries/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSlugRoute = ServicesSlugRouteImport.update({
+  id: '/services/$slug',
+  path: '/services/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
+  id: '/solutions/',
+  path: '/solutions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsSlugRoute = SolutionsSlugRouteImport.update({
+  id: '/solutions/$slug',
+  path: '/solutions/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contacts': typeof ContactsRoute
+  '/privacy': typeof PrivacyRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/cases/$slug': typeof CasesSlugRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
+  '/services/$slug': typeof ServicesSlugRoute
+  '/solutions/$slug': typeof SolutionsSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/cases/': typeof CasesIndexRoute
+  '/industries/': typeof IndustriesIndexRoute
+  '/services/': typeof ServicesIndexRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contacts': typeof ContactsRoute
+  '/privacy': typeof PrivacyRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/cases/$slug': typeof CasesSlugRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
+  '/services/$slug': typeof ServicesSlugRoute
+  '/solutions/$slug': typeof SolutionsSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/cases': typeof CasesIndexRoute
+  '/industries': typeof IndustriesIndexRoute
+  '/services': typeof ServicesIndexRoute
+  '/solutions': typeof SolutionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contacts': typeof ContactsRoute
+  '/privacy': typeof PrivacyRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/cases/$slug': typeof CasesSlugRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
+  '/services/$slug': typeof ServicesSlugRoute
+  '/solutions/$slug': typeof SolutionsSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/cases/': typeof CasesIndexRoute
+  '/industries/': typeof IndustriesIndexRoute
+  '/services/': typeof ServicesIndexRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contacts'
+    | '/privacy'
+    | '/blog/$slug'
+    | '/cases/$slug'
+    | '/industries/$slug'
+    | '/services/$slug'
+    | '/solutions/$slug'
+    | '/blog/'
+    | '/cases/'
+    | '/industries/'
+    | '/services/'
+    | '/solutions/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contacts'
+    | '/privacy'
+    | '/blog/$slug'
+    | '/cases/$slug'
+    | '/industries/$slug'
+    | '/services/$slug'
+    | '/solutions/$slug'
+    | '/blog'
+    | '/cases'
+    | '/industries'
+    | '/services'
+    | '/solutions'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contacts'
+    | '/privacy'
+    | '/blog/$slug'
+    | '/cases/$slug'
+    | '/industries/$slug'
+    | '/services/$slug'
+    | '/solutions/$slug'
+    | '/blog/'
+    | '/cases/'
+    | '/industries/'
+    | '/services/'
+    | '/solutions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactsRoute: typeof ContactsRoute
+  PrivacyRoute: typeof PrivacyRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  CasesSlugRoute: typeof CasesSlugRoute
+  IndustriesSlugRoute: typeof IndustriesSlugRoute
+  ServicesSlugRoute: typeof ServicesSlugRoute
+  SolutionsSlugRoute: typeof SolutionsSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  CasesIndexRoute: typeof CasesIndexRoute
+  IndustriesIndexRoute: typeof IndustriesIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
+  SolutionsIndexRoute: typeof SolutionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +221,115 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacts': {
+      id: '/contacts'
+      path: '/contacts'
+      fullPath: '/contacts'
+      preLoaderRoute: typeof ContactsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cases/': {
+      id: '/cases/'
+      path: '/cases'
+      fullPath: '/cases/'
+      preLoaderRoute: typeof CasesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cases/$slug': {
+      id: '/cases/$slug'
+      path: '/cases/$slug'
+      fullPath: '/cases/$slug'
+      preLoaderRoute: typeof CasesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/': {
+      id: '/industries/'
+      path: '/industries'
+      fullPath: '/industries/'
+      preLoaderRoute: typeof IndustriesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/$slug': {
+      id: '/industries/$slug'
+      path: '/industries/$slug'
+      fullPath: '/industries/$slug'
+      preLoaderRoute: typeof IndustriesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/$slug': {
+      id: '/services/$slug'
+      path: '/services/$slug'
+      fullPath: '/services/$slug'
+      preLoaderRoute: typeof ServicesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/': {
+      id: '/solutions/'
+      path: '/solutions'
+      fullPath: '/solutions/'
+      preLoaderRoute: typeof SolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/$slug': {
+      id: '/solutions/$slug'
+      path: '/solutions/$slug'
+      fullPath: '/solutions/$slug'
+      preLoaderRoute: typeof SolutionsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactsRoute: ContactsRoute,
+  PrivacyRoute: PrivacyRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  CasesSlugRoute: CasesSlugRoute,
+  IndustriesSlugRoute: IndustriesSlugRoute,
+  ServicesSlugRoute: ServicesSlugRoute,
+  SolutionsSlugRoute: SolutionsSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  CasesIndexRoute: CasesIndexRoute,
+  IndustriesIndexRoute: IndustriesIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
+  SolutionsIndexRoute: SolutionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
