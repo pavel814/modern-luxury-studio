@@ -10,7 +10,7 @@ export function CtaSection({
 }: {
   title?: string;
   text?: string;
-  source?: string;
+  source?: string | undefined;
 }) {
   return (
     <section id="lead" className="surface-ink relative overflow-hidden">

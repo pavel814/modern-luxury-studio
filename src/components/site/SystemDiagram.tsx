@@ -81,6 +81,7 @@ export function SystemDiagram({ className }: { className?: string }) {
           {beforeLinks.map(([a, b, label]) => {
             const A = byId[a];
             const B = byId[b];
+            if (!A || !B) return null;
             const mx = (A.x + B.x) / 2;
             const my = (A.y + B.y) / 2;
             return (
