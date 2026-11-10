@@ -292,3 +292,13 @@
     scroll-behavior: auto !important;
   }
 }
+
+@utility footer-link {
+  color: var(--ink-foreground);
+  opacity: 0.8;
+  transition: opacity 0.2s, color 0.2s;
+  &:hover {
+    opacity: 1;
+    color: var(--signal);
+  }
+}
