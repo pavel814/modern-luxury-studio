@@ -23,7 +23,7 @@ const schema = z.object({
 
 type Errors = Partial<Record<keyof z.infer<typeof schema>, string>>;
 
-export function LeadForm({ invert = false, source }: { invert?: boolean; source?: string }) {
+export function LeadForm({ invert = false, source }: { invert?: boolean; source?: string | undefined }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
